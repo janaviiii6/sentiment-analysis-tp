@@ -16,11 +16,37 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"  />
+
    
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
     <title>React App</title>
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- OWL CAROUSEL JS -->
+    <!-- <script src="jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          items:2,
+          loop:true,
+          margin:50,
+          autoplay:true,
+          autoplayTimeout:3000,
+          autoplayHoverPause:true
+      });
+      $('.play').on('click',function(){
+          owl.trigger('play.owl.autoplay',[1000])
+      })
+      $('.stop').on('click',function(){
+          owl.trigger('stop.owl.autoplay')
+      })
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

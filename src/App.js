@@ -6,7 +6,7 @@ import Herosection from './Components/Herosection';
 import Features from './Components/Features';
 import SentimentInfo from './Components/SentimentInfo';
 import SentimentWorkSection from './Components/SentimentWorkSection';
-// import CategoriesSection from './Components/CategoriesSection';
+import CategorySection from './Components/CategorySection';
 const App = () => {
   return (
     <div>
@@ -15,7 +15,7 @@ const App = () => {
       <Features/>
       <SentimentInfo/>
       <SentimentWorkSection/>
-      {/* <CategoriesSection /> */}
+      <CategorySection />
       {/* Add other components/content below the Navbar */}
     </div>
   );
